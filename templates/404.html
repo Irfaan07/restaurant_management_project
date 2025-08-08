@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Page not found -- 404</title>
+
+    <style>
+        :root{
+        --bg:#0f1724;
+        --card:#0b1220;
+        --accent:#60a5fa;
+        --muted:#94a3b8;
+        --white:#ffffff;
+        }
+        html,body{height:100%}
+        body{
+        margin:0;
+        font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+        background:linear-gradient(180deg,#071025 0%, var(--bg) 100%);
+        color:var(--white):
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding:24px;
+        }
+
+        .card{
+        width:100%;
+        max-width:880px;
+        background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+        border-radius:12px;
+        box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+        padding:36px;
+        display:flex;
+        gap:28px;
+        align-items:center;
+        }
+
+        .illustration{
+        min-width:140px;
+        max-width:220px;
+        flex:0 0 180px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        }
+
+        .illustration svg{width:100%; height:auto; opacity:0.95}
+
+        .content{
+        flex:1;
+        min-width:0;
+        }
+
+        h1{
+        margin:0 0 8px 0;
+        font-size:34px;
+        letter-spacing:-0.02em;
+        }
+        p.lead{
+        margin:0 0 18px 0;
+        color:var(--muted);
+        font-size:15px;
+        }
+
+        .actions{
+        display:flex;
+        gap:12px;
+        margin-top:18px;
+        flex-wrap:wrap;
+        }
+
+        .btn{
+        display:inline-flexl
+        align-items:center;
+        gap:10ppx;
+        padding:10px 14px;
+        border-radius:10px;
+        text-decoration:none;
+        font-weight:600;
+        cursor:pointer;
+        border:0;
+        }
+
+        .btn-primary{
+        background:linear-gradient(90deg, var(----accent), #3b82f6);
+        color:var(--white);
+        box-shadow: 0 6px 18px rgba(59,130,246,0.18);
+        }
+
+        .btn-ghost{
+        background:transparent;
+        color:var(--muted);
+        border:1px solid rgba(255,255,255,0.04);
+        }
+
+        .meta{
+        margin-top:14px;
+        color:rgba(255,255,255,0.06);
+        font-size:13px;
+        }
+
+        @media(max-width:700px){
+        .card{flex-direction:column; padding;20px}
+        .illustration{flex:0 0 120px}
+        h1{font-size:26px}
+        }
+    </style>
+</head>
+<body>
+    <main class="card" role="main" aria-labelledby="title">
+        <div class="illustration" aria-hidden="true">
+            <!--simple SVG illustration -->
+            <svg viewBox="0 0 120 120" xlmns="http://www.w3.org/2000/svg" fill="none">
+              <rect width="120" height="120" rx="18" fill="#071833"/>
+              <g transform="translate(20 18)" fill="none" stroke="#60a5fa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 70v-8a24 24 0 0124-24h24" opacity="0.14" stroke="#fff"/>
+                <path d="M32 52h24a24 24 0 0124 24v8" opacity="0.08" stroke="#fff"/>
+                <path d="M8 36c6-12 18-18 32-18s26 6 32 18"/>
+              </g>
+              <text x="60" y="92" text-anchora="middle" fill="#94a3b8" font-size="10" font-family="Inter,Arial">404 -- Not found</text>
+            </svg>
+        </div>
+
+        <div class="content">
+            <h1 id="title">Page not found</h1>
+            <p class="lead">We couldn't find the page you were looking for. It may have been moved, deleted, or the URL could be misspelled.</p>
+            
+            <div class="actions">
+                <a href="/" class="btn btn-primary" title="Go to homepage">← Back to home</a>
+                <a href="mailto:help@example.com" class="btn btn-ghost">Contact support</a>
+            </div>
+
+            <div class="meta" role="note">
+                Tip: double-check the URL or try searching from the homepage.
+            </div>
+        </div>
+    </main>
+</body>
+</html>
